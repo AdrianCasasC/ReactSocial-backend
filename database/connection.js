@@ -6,7 +6,7 @@ const connection = async() => {
     mongoose.set('strictQuery', false);
 
     try{
-        await mongoose.connect("mongodb://127.0.0.1:27017/mi_redsocial");
+        await mongoose.connect(process.env.DATABASE_URI);
 
         console.log("Conectado correctamente a bd: mi_redsocial");
 
