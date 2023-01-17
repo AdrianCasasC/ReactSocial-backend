@@ -2,6 +2,7 @@
 const connection = require("./database/connection");
 const express = require("express");
 const cors = require("cors");
+const corsOptions = require('./config/corsOptions')
 
 //Importar variables de entorno
 //require('dotenv').config()
@@ -17,7 +18,7 @@ const app = express();
 const puerto = process.env.PORT || 3900;
 
 // Configurar cors
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Convertir los datos del body a objetos js
 app.use(express.json());
