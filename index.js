@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 
 //Importar variables de entorno
-require('dotenv').config()
+//require('dotenv').config()
 
 // Mensaje bienvenida
 console.log("API NODE para RED SOCIAL arrancada!!");
